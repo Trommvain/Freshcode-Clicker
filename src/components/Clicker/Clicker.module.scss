@@ -1,0 +1,216 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 900px;
+    max-width: 900px;
+    min-height: 650px;
+    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+    border-radius: 5px;
+}
+
+%block {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 220px;
+}
+
+.mainWindow {
+    @extend %block;
+    width: 100%;
+    
+    p {
+        font-size: 48px;
+        font-weight: 800;
+        color: black;
+        margin-top: 27px;
+    }
+}
+
+.setModeBlock {
+    @extend %block;
+    width: 26%;
+
+    p {
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        user-select: none;
+    }
+}
+
+.setStepBlock {
+    @extend %block;
+    width: 31%;
+    padding-left: 0;
+    padding-right: 0;
+
+    .stepTitle {
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        user-select: none;
+    }
+
+    p {
+        font-size: 22px;
+        font-weight: 500;
+        color: white;
+        margin: 15px 0;
+        user-select: none;
+    }
+}
+
+.autoClickBlock {
+    @extend %block;
+    width: 30.5%;
+    padding-left: 0;
+    padding-right: 0;
+
+    p {
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 15px auto;
+    }
+}
+
+%btn {
+    display: block;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    user-select: none;
+
+    &:not([disabled]):hover {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+    }
+
+    &:not([disabled]):active {
+        transition: none;
+        background-color: #ff9fef;
+    }
+
+    &:disabled {
+        background-color: lightgray;
+        color: gray;
+        border-color: gray;
+    }
+}
+
+.clickBtn {
+    @extend %btn;
+    display: inline-block;
+    width: 200px;
+    margin: 0 30px 0 auto;
+}
+
+.resetBtn {
+    @extend %btn;
+    display: inline-block;
+    width: 200px;
+    margin: 0;
+}
+
+.modeBtn {
+    @extend %btn;
+    width: 235px;
+    margin: 25px auto 0 auto;
+}
+
+.stepBtnPlus {
+    @extend %btn;
+    display: inline-block;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    margin-top: 0;
+    margin-right: 50px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.stepBtnMinus {
+    @extend %btn;
+    display: inline-block;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    margin-top: 0;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.input {
+    width: 70%;
+    padding: 10px 15px;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 15px 0 0 0;
+
+        &::placeholder {
+            color: rgb(192, 192, 192);
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+
+        &:disabled {
+            background-color: lightgray;
+            color: gray;
+            border-color: gray;
+        }
+  }
+
+  .inputErr {
+    color: red !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+  }
+
+  .autoClickBtn {
+    @extend %btn;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .autoClickBtnActive {
+    @extend %btn;
+    width: 200px;
+    margin: 0 auto;
+    background: linear-gradient(#52ee5f, #fc0fc0, #52ee5f);
+    background-size: 1000% 1000%;
+    animation: gradient 0.7s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+  .resetSettingsBtn {
+    @extend %btn;
+    width: 300px;
+    margin: 0 auto 10px auto;
+}
