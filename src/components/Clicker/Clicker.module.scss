@@ -4,7 +4,8 @@
     min-width: 900px;
     max-width: 900px;
     min-height: 650px;
-    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+    background: rgb(25,25,25);
+    background: linear-gradient(0deg, rgba(25,25,25,1) 0%, rgba(54,54,54,1) 44%, rgba(111,111,111,1) 100%);
     border-radius: 5px;
 }
 
@@ -24,7 +25,7 @@
     p {
         font-size: 48px;
         font-weight: 800;
-        color: black;
+        color: white;
         margin-top: 27px;
     }
 }
@@ -81,7 +82,7 @@
 
 %btn {
     display: block;
-    background-color: white;
+    background-color: #dedede;
     color: black;
     font-size: 24px;
     font-weight: 500;
@@ -98,7 +99,7 @@
 
     &:not([disabled]):active {
         transition: none;
-        background-color: #ff9fef;
+        background-color: #ff9bfe;
     }
 
     &:disabled {
@@ -159,9 +160,10 @@
     border-radius: 5px;
     font-size: 18px;
     margin: 15px 0 0 0;
+    background-color: #dedede;
 
         &::placeholder {
-            color: rgb(192, 192, 192);
+            color: rgb(78, 78, 78);
         }
 
         &:focus::placeholder {
@@ -170,8 +172,8 @@
 
         &:disabled {
             background-color: lightgray;
-            color: gray;
-            border-color: gray;
+            color: rgb(78, 78, 78);
+            border-color: rgb(78, 78, 78);
         }
   }
 
@@ -192,9 +194,11 @@
     @extend %btn;
     width: 200px;
     margin: 0 auto;
-    background: linear-gradient(#52ee5f, #fc0fc0, #52ee5f);
+    background: rgb(76,0,103);
+    background: rgb(255,142,235);
+    background: linear-gradient(0deg, rgba(255,142,235,1) 4%, rgba(181,0,165,1) 44%, rgba(255,155,254,1) 100%);
     background-size: 1000% 1000%;
-    animation: gradient 0.7s ease infinite;
+    animation: gradient 1s ease infinite;
   }
 
   @keyframes gradient {
